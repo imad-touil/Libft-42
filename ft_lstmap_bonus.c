@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 14:50:41 by imatouil          #+#    #+#             */
-/*   Updated: 2024/11/09 14:53:54 by imatouil         ###   ########.fr       */
+/*   Updated: 2024/11/09 17:16:23 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,18 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_list;
 	t_list	*new_node;
+	void	*ptr;
 
 	if (!lst || !f)
 		return (NULL);
 	new_list = NULL;
 	while (lst)
 	{
-		new_node = ft_lstnew(f(lst->content));
+		ptr = f(lst->content);
+		new_node = ft_lstnew(ptr);
 		if (!new_node)
 		{
+			del(ptr);
 			ft_lstclear(&new_list, del);
 			return (NULL);
 		}

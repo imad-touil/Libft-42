@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 15:40:30 by imatouil          #+#    #+#             */
-/*   Updated: 2024/11/03 16:58:37 by imatouil         ###   ########.fr       */
+/*   Updated: 2024/11/10 01:41:47 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,7 @@ char	*ft_itoa(int nbr)
 	char	*t;
 
 	if (nbr == -2147483648)
-	{
-		t = (char *)malloc(12 * sizeof(char));
-		if (!t)
-			return (NULL);
-		ft_memcpy(t, "-2147483648", 12);
-		return (t);
-	}
+		return (ft_strdup("-2147483648"));
 	len = 0;
 	n = nbr;
 	if (nbr <= 0)

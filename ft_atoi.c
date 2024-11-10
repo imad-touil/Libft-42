@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 22:50:18 by imatouil          #+#    #+#             */
-/*   Updated: 2024/11/08 17:36:03 by imatouil         ###   ########.fr       */
+/*   Updated: 2024/11/09 21:05:32 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	size_t	i;
-	size_t	r;
-	int		s;
+	size_t				i;
+	unsigned long long	r;
+	int					s;
 
 	i = 0;
 	r = 0;
@@ -32,9 +32,9 @@ int	ft_atoi(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		r = 10 * r + str[i] - 48;
-		if (r > SIZE_MAX && s == 1)
+		if (r > LLONG_MAX && s == 1)
 			return (-1);
-		if (r > SIZE_MAX && s == -1)
+		if (r > LLONG_MAX && s == -1)
 			return (0);
 		i++;
 	}
