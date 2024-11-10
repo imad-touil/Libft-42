@@ -1,5 +1,36 @@
 # Libft-42
-<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="256" height="256" rx="60" fill="#394AAB"/>
-<path d="M134.001 33C169.144 33 199.828 52.0863 216.262 80.4561L216.102 80.183L174.753 103.991C166.607 90.1977 151.672 80.8892 134.54 80.6975L134.001 80.6945C107.875 80.6945 86.6945 101.874 86.6945 127.999C86.6945 136.543 88.9723 144.552 92.9335 151.469C101.088 165.704 116.416 175.306 134.001 175.306C151.693 175.306 167.109 165.582 175.222 151.195L175.025 151.54L216.311 175.458C200.057 203.588 169.794 222.615 135.059 222.994L134.001 223C98.746 223 67.9753 203.796 51.582 175.276C43.5791 161.353 39 145.212 39 127.999C39 75.5334 81.5323 33 134.001 33Z" fill="white"/>
-</svg>
+The libft project is a foundational project in the 42 curriculum, specifically designed to help students build their own library of C functions from scratch. It's an excellent way to practice implementing basic functions and understanding how libraries work in C. Here’s a breakdown of what libft involves and some tips for tackling it:
+
+1. Purpose of the libft Project
+The goal of libft is to re-implement commonly used standard C library functions and create your own utility functions. By doing this, you’ll gain a deeper understanding of how C libraries work and the mechanics of C functions.
+This project lays the groundwork for future 42 projects by providing a custom library (libft.a) that you can use in your upcoming assignments.
+2. Main Sections of the libft Project
+Part 1: Basic standard library functions.
+
+You’ll start by re-implementing standard functions from <string.h>, <ctype.h>, etc. These often include functions like ft_strlen, ft_strcpy, ft_memset, ft_bzero, and ft_toupper.
+These functions focus on handling strings, memory, and character checks.
+Part 2: Additional utility functions.
+
+This part extends the library with functions that are a bit more complex but still essential for handling strings and memory, such as ft_substr, ft_strjoin, and ft_split.
+Functions in Part 2 often manipulate strings and memory in more complex ways, requiring careful memory management to avoid leaks.
+Bonus Part: Linked list functions.
+
+If you complete Part 1 and Part 2, you can implement linked list functions in the bonus part. Examples include ft_lstnew, ft_lstadd_front, ft_lstsize, etc.
+This part introduces you to data structures, specifically linked lists, and is excellent practice for more advanced data management in C.
+3. Requirements
+Coding Style: Follow the 42 Norm strictly (e.g., limited line lengths, restricted use of certain statements). The norm is enforced in libft and all future projects.
+File Organization: Each function should be in its own .c file, and all header declarations should be in a libft.h file.
+Makefile: You need to create a Makefile to compile your library. This should include standard rules (all, clean, fclean, re) and produce libft.a, a static library file that can be linked to other programs.
+4. Testing and Debugging
+Create test cases: Write test programs to check if each function works as expected. You can use printf statements for simple debugging or tools like Valgrind to check for memory leaks.
+Use libft testers: Several open-source testers for libft are available on GitHub. These can help ensure your functions handle edge cases and follow the expected behavior.
+5. Tips for Success
+Understand each function fully: Don’t rush through the implementations. Make sure you understand the behavior and edge cases for each function.
+Manage memory carefully: Functions that involve dynamic memory allocation (malloc) must handle memory correctly, freeing any allocated memory where necessary.
+Stay organized: Structure your code and files in a clear, consistent way. This will make debugging easier and help you follow the 42 norm.
+Seek peer reviews: Peer review is encouraged in the 42 network, so ask your fellow students to review your code. This can help you catch mistakes and learn from others’ perspectives.
+Once you complete the project, libft.a becomes a helpful tool for your future 42 projects, as it contains functions that you implemented yourself and fully understand.
+
+
+
+Always Ask ChatGpt huh
